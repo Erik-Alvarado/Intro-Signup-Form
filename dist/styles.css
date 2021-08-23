@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+@keyframes trickleDown {
+  0% {
+    background-position-y: 200%;
+  }
+  50% {
+    background-position-y: -200%;
+  }
+  100% {
+    background-position-y: 200%;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0%;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+main {
+  background-color: #ff7a7a;
+  background-image: url("/images/bg-intro-desktop.png");
+  background-repeat: repeat-y;
+  animation: trickleDown ease 70s infinite;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  margin: auto 50px;
+  height: 100%;
+  align-items: center;
+}
+
+.container .learn-code {
+  width: 50%;
+  padding: 0 25px 0 125px;
+  color: white;
+}
+
+.container .learn-code h1 {
+  font-size: 3rem;
+  line-height: 55px;
+}
+
+.container .learn-code p {
+  margin-top: 15px;
+}
+
+.container .code-form {
+  padding: 0 125px 0 25px;
+  width: 50%;
+}
+
+.container .code-form .free-action {
+  padding: 15px 25px;
+  background-color: #6055a5;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 300;
+  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.container .code-form .free-action span {
+  font-weight: 600;
+}
+
+.container .code-form .subscribe-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.container .code-form .subscribe-form input {
+  width: 100%;
+  padding: 15px 35px 15px 25px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(153, 153, 153, 0.295);
+  caret-color: #6055a5;
+  font-weight: 600;
+  color: #3e3c49;
+}
+
+.container .code-form .subscribe-form input:active, .container .code-form .subscribe-form input:focus, .container .code-form .subscribe-form input:focus-visible {
+  outline: #6055a5 auto 0.5px !important;
+}
+
+.container .code-form .subscribe-form input:not(:placeholder-shown):not(:focus):invalid {
+  border-color: #ff7a7a;
+  margin-bottom: 30px;
+}
+
+.container .code-form .subscribe-form .name-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .code-form .subscribe-form .register {
+  border: 1px solid #38cc8c;
+  background-color: #38cc8c;
+  box-shadow: inset 0 -4px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container .code-form .subscribe-form .agree {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #b9b6d3;
+}
+
+.container .code-form .subscribe-form .agree a {
+  color: #ff7a7a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.container .code-form .subscribe-form .first-name,
+.container .code-form .subscribe-form .last-name,
+.container .code-form .subscribe-form .email-field,
+.container .code-form .subscribe-form .pw-field {
+  position: relative;
+}
+
+.container .code-form .subscribe-form .first-name .error-msg,
+.container .code-form .subscribe-form .last-name .error-msg,
+.container .code-form .subscribe-form .email-field .error-msg,
+.container .code-form .subscribe-form .pw-field .error-msg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 10px;
+  text-align: end;
+}
+
+.container .code-form .subscribe-form .first-name .error-msg img,
+.container .code-form .subscribe-form .last-name .error-msg img,
+.container .code-form .subscribe-form .email-field .error-msg img,
+.container .code-form .subscribe-form .pw-field .error-msg img {
+  margin-bottom: 5px;
+}
+
+.container .code-form .subscribe-form .first-name .error-msg p,
+.container .code-form .subscribe-form .last-name .error-msg p,
+.container .code-form .subscribe-form .email-field .error-msg p,
+.container .code-form .subscribe-form .pw-field .error-msg p {
+  color: #ff7a7a;
+  font-size: 12px;
+  font-style: oblique;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #3e3c49;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,118 @@
+main {
+  background-color: $bgRed;
+  background-image: url("/images/bg-intro-desktop.png");
+  background-repeat: repeat-y;
+  animation: trickleDown ease 70s infinite;
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  display: flex;
+  margin: auto 50px;
+  height: 100%;
+  align-items: center;
+
+  .learn-code {
+    width: 50%;
+    padding: 0 25px 0 125px;
+    color: $base;
+    h1 {
+      font-size: 3rem;
+      line-height: 55px;
+    }
+    p {
+      margin-top: 15px;
+    }
+  }
+  .code-form {
+    padding: 0 125px 0 25px;
+    width: 50%;
+    .free-action {
+      padding: 15px 25px;
+      background-color: $accentBlue;
+      color: $base;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 300;
+      box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      span {
+        font-weight: 600;
+      }
+    }
+    .subscribe-form {
+      background-color: $base;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 100%;
+        padding: 15px 35px 15px 25px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(153, 153, 153, 0.295);
+        caret-color: $accentBlue;
+        font-weight: 600;
+        color: $darkBlue;
+        &:active,
+        &:focus,
+        &:focus-visible {
+          outline: $accentBlue auto 0.5px !important;
+        }
+        &:not(:placeholder-shown):not(:focus):invalid {
+          border-color: $bgRed;
+          margin-bottom: 30px;
+        }
+      }
+      .name-field {
+        display: flex;
+        flex-direction: column;
+      }
+      .register {
+        border: 1px solid $limeGreen;
+        background-color: $limeGreen;
+        box-shadow: inset 0 -4px 2px rgba(0, 0, 0, 0.2);
+        color: $base;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .agree {
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        color: $grayBlue;
+        a {
+          color: $bgRed;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+      .first-name,
+      .last-name,
+      .email-field,
+      .pw-field {
+        position: relative;
+        .error-msg {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          margin-top: 15px;
+          margin-right: 10px;
+          text-align: end;
+          img {
+            margin-bottom: 5px;
+          }
+          p {
+            color: $bgRed;
+            font-size: 12px;
+            font-style: oblique;
+          }
+        }
+      }
+    }
+  }
+}

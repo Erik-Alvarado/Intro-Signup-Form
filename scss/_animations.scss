@@ -1,0 +1,41 @@
+@keyframes trickleDown {
+  0% {
+    background-position-y: 200%;
+  }
+  50% {
+    background-position-y: -200%;
+  }
+  100% {
+    background-position-y: 200%;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0%;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
