@@ -58,10 +58,16 @@ body {
 main {
   background-color: #ff7a7a;
   background-image: url("/images/bg-intro-desktop.png");
-  background-repeat: repeat-y;
   animation: trickleDown ease 70s infinite;
+  background-size: 100%;
   height: 100vh;
   width: 100%;
+}
+
+@media (max-width: 425px) {
+  main {
+    background-size: 300%;
+  }
 }
 
 .container {
@@ -71,15 +77,97 @@ main {
   align-items: center;
 }
 
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin: auto 25px;
+  }
+}
+
 .container .learn-code {
   width: 50%;
   padding: 0 25px 0 125px;
   color: white;
+  animation: fadeLeft ease 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@media (max-width: 83.75em) {
+  .container .learn-code {
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 71.875em) {
+  .container .learn-code {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .container .learn-code {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .learn-code {
+    width: 100%;
+    margin-bottom: 45px;
+    text-align: center;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .container .learn-code {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container .learn-code {
+    width: 350px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 325px) {
+  .container .learn-code {
+    margin-bottom: 30px;
+  }
 }
 
 .container .learn-code h1 {
   font-size: 3rem;
   line-height: 55px;
+}
+
+@media (max-width: 39.9375em) {
+  .container .learn-code h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .container .learn-code h1 {
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container .learn-code h1 {
+    line-height: 35px;
+    font-size: 2.25rem;
+  }
 }
 
 .container .learn-code p {
@@ -91,6 +179,37 @@ main {
   width: 50%;
 }
 
+@media (max-width: 83.75em) {
+  .container .code-form {
+    padding-right: 75px;
+  }
+}
+
+@media (max-width: 71.875em) {
+  .container .code-form {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .container .code-form {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .code-form {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .container .code-form {
+    padding: 0;
+  }
+}
+
 .container .code-form .free-action {
   padding: 15px 25px;
   background-color: #6055a5;
@@ -100,6 +219,9 @@ main {
   font-weight: 300;
   box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.75s;
 }
 
 .container .code-form .free-action span {
@@ -113,6 +235,8 @@ main {
   box-shadow: 0 7px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
 }
 
 .container .code-form .subscribe-form input {
@@ -135,6 +259,10 @@ main {
   margin-bottom: 30px;
 }
 
+.container .code-form .subscribe-form input:not(:placeholder-shown):not(:focus):invalid + .error-msg {
+  display: block;
+}
+
 .container .code-form .subscribe-form .name-field {
   display: flex;
   flex-direction: column;
@@ -148,6 +276,12 @@ main {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
+  transition: ease 0.3s;
+}
+
+.container .code-form .subscribe-form .register:hover, .container .code-form .subscribe-form .register:active {
+  border-color: #53eeab;
+  background-color: #53eeab;
 }
 
 .container .code-form .subscribe-form .agree {
@@ -181,6 +315,7 @@ main {
   margin-top: 15px;
   margin-right: 10px;
   text-align: end;
+  display: none;
 }
 
 .container .code-form .subscribe-form .first-name .error-msg img,
@@ -213,5 +348,18 @@ main {
 .attribution a {
   text-decoration: none;
   color: #3e3c49;
+}
+
+@media (max-width: 425px) {
+  .attribution {
+    width: 350px;
+    margin: 0 auto 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .attribution {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
